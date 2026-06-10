@@ -360,6 +360,9 @@ section{position:relative}
   transform:scale(1.14);
 }
 .dx.active .dx-img{filter:saturate(1.12) brightness(1.04) contrast(1.05);transform:scale(1)}
+/* Jakarta is portrait — show the full tower instead of a cropped band */
+.dx-img[src*="jakarta"]{object-position:center 24%}
+.dx.active .dx-img[src*="jakarta"]{object-fit:contain;object-position:center}
 .dx-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.1) 0%,transparent 40%,rgba(10,10,10,.86) 90%);pointer-events:none}
 /* warm bloom rising under the active panel */
 .dx::after{content:'';position:absolute;left:-20%;right:-20%;bottom:-30%;height:70%;background:radial-gradient(ellipse 60% 55% at 50% 100%,rgba(242,98,7,.2) 0%,transparent 70%);opacity:0;transition:opacity .8s ease;pointer-events:none}
@@ -392,7 +395,6 @@ section{position:relative}
   font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(40px,4.6vw,68px);font-weight:800;
   letter-spacing:-2.5px;line-height:.95;text-transform:uppercase;color:var(--ink);margin:4px 0 2px;white-space:nowrap;
 }
-.dx-landmark{font-family:'Instrument Serif',serif;font-style:italic;font-size:17px;color:var(--ink-mute);letter-spacing:-.2px;white-space:nowrap}
 .dx-foot{display:flex;align-items:center;gap:18px;margin-top:18px;padding-top:16px;border-top:1px solid rgba(245,239,224,.12);white-space:nowrap}
 .dx-status{font-family:'Inter',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:7px}
 .dx-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(103,215,137,.5);animation:pulse 2s ease-in-out infinite}
@@ -980,7 +982,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
 
       <!-- MUMBAI -->
       <a href="https://lu.ma/theproductfolks" target="_blank" class="dx active">
-        <img class="dx-img" src="assets/mumbai.png" alt="Mumbai · Gateway of India" loading="lazy"/>
+        <img class="dx-img" src="assets/mumbai.jpg" alt="Mumbai · Gateway of India" loading="lazy" decoding="async"/>
         <div class="dx-shade"></div>
         <div class="dx-rail" aria-hidden="true">
           <span class="dx-rail-num">01</span>
@@ -989,7 +991,6 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
         <div class="dx-meta">
           <span class="dx-idx">VS / 01 · Maharashtra, India</span>
           <h3 class="dx-city">Mumbai</h3>
-          <span class="dx-landmark">Gateway of India</span>
           <div class="dx-foot">
             <span class="dx-status">Open</span>
             <span class="dx-date">Spring 2026</span>
@@ -1000,7 +1001,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
 
       <!-- DELHI -->
       <a href="https://lu.ma/theproductfolks" target="_blank" class="dx">
-        <img class="dx-img" src="assets/delhi.png" alt="Delhi · India Gate" loading="lazy"/>
+        <img class="dx-img" src="assets/delhi.jpg" alt="Delhi · India Gate" loading="lazy" decoding="async"/>
         <div class="dx-shade"></div>
         <div class="dx-rail" aria-hidden="true">
           <span class="dx-rail-num">02</span>
@@ -1009,7 +1010,6 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
         <div class="dx-meta">
           <span class="dx-idx">VS / 02 · NCR, India</span>
           <h3 class="dx-city">Delhi</h3>
-          <span class="dx-landmark">India Gate</span>
           <div class="dx-foot">
             <span class="dx-status">Open</span>
             <span class="dx-date">Spring 2026</span>
@@ -1020,7 +1020,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
 
       <!-- BANGALORE -->
       <a href="https://lu.ma/theproductfolks" target="_blank" class="dx">
-        <img class="dx-img" src="assets/banglore.png" alt="Bangalore · Vidhana Soudha" loading="lazy"/>
+        <img class="dx-img" src="assets/banglore.jpg" alt="Bangalore · Vidhana Soudha" loading="lazy" decoding="async"/>
         <div class="dx-shade"></div>
         <div class="dx-rail" aria-hidden="true">
           <span class="dx-rail-num">03</span>
@@ -1029,7 +1029,6 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
         <div class="dx-meta">
           <span class="dx-idx">VS / 03 · Karnataka, India</span>
           <h3 class="dx-city">Bangalore</h3>
-          <span class="dx-landmark">Vidhana Soudha</span>
           <div class="dx-foot">
             <span class="dx-status">Open</span>
             <span class="dx-date">Spring 2026</span>
@@ -1040,7 +1039,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
 
       <!-- SINGAPORE -->
       <a href="https://lu.ma/theproductfolks" target="_blank" class="dx">
-        <img class="dx-img" src="assets/singapore.png" alt="Singapore · Marina Bay Sands" loading="lazy"/>
+        <img class="dx-img" src="assets/singapore.jpg" alt="Singapore · Marina Bay Sands" loading="lazy" decoding="async"/>
         <div class="dx-shade"></div>
         <div class="dx-rail" aria-hidden="true">
           <span class="dx-rail-num">04</span>
@@ -1049,7 +1048,6 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
         <div class="dx-meta">
           <span class="dx-idx">VS / 04 · SE Asia</span>
           <h3 class="dx-city">Singapore</h3>
-          <span class="dx-landmark">Marina Bay Sands</span>
           <div class="dx-foot">
             <span class="dx-status">Open</span>
             <span class="dx-date">Spring 2026</span>
@@ -1060,7 +1058,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
 
       <!-- JAKARTA -->
       <a href="https://lu.ma/theproductfolks" target="_blank" class="dx">
-        <img class="dx-img" src="assets/jakarta.png" alt="Jakarta · Monas" loading="lazy"/>
+        <img class="dx-img" src="assets/jakarta.jpg" alt="Jakarta · Monas" loading="lazy" decoding="async"/>
         <div class="dx-shade"></div>
         <div class="dx-rail" aria-hidden="true">
           <span class="dx-rail-num">05</span>
@@ -1069,7 +1067,6 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:36px 36px 3
         <div class="dx-meta">
           <span class="dx-idx">VS / 05 · Indonesia</span>
           <h3 class="dx-city">Jakarta</h3>
-          <span class="dx-landmark">Monas</span>
           <div class="dx-foot">
             <span class="dx-status">Open</span>
             <span class="dx-date">Spring 2026</span>
